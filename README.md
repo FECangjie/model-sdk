@@ -1,4 +1,6 @@
 ## test: model-sdk
+done：物品 onnx、人脸
+
 
 ### 测试步骤：
 
