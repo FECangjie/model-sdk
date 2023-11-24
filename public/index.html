@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="zh" foxified="">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>sdk</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <script src="./lib/ort.min.js"></script>
+    <script src="./article.min.js"></script>
+    <!-- <script src="./article.js"></script> -->
+    <style link="./style.css"></style>
+  </head>
+
+  <div id="sdk-wrapper">
+    <div class="button-box">
+      <div class="field-wrapper">
+        <img
+          id="myImg"
+          src="./lib/1.jpg"
+          onload="loadImage()"
+          style="width: 640px; height: 640px"
+        />
+        <!-- <img id="myImg" src="./lib/1.resize.jpg" onload="loadImage()" /> -->
+      </div>
+      <div class="field-wrapper">
+        <canvas id="myCanvas"></canvas>
+      </div>
+
+      <div class="field-wrapper">
+        <!-- <button class="btn">模型处理结果见终端运行结果</button> -->
+      </div>
+      <div class="tips">
+        <p>模型处理见终端运行结果</p>
+      </div>
+    </div>
+    <div class="remote-container" id="container"></div>
+  </div>
+</html>

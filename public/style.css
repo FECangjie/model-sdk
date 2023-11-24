@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  #sdk-wrapper {
+    display: flex;
+    padding: 10px;
+  }
+
+  .button-box {
+    margin-right: 10px;
+  }
+
+  .remote-container {
+    width: 270px;
+    height: 540px;
+    background-color: #f1f1f1;
+
+    /* background-image: url("./image/cover.png"); */
+
+    background-repeat: no-repeat;
+
+    background-position: center center;
+
+    background-size: cover;
+  }
+
+  .field-wrapper {
+    display: flex;
+
+    margin-bottom: 10px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #b3b3b3;
+  }
+
+  .tokenURL {
+    width: 100%;
+
+    padding: 5px;
+
+    border: 1px solid #dcdfe6;
+  }
+
+  .step {
+    margin: 0 10px;
+
+    width: 20px;
+
+    height: 20px;
+
+    line-height: 20px;
+
+    text-align: center;
+
+    background-color: rgb(64, 158, 255);
+
+    color: #fff;
+
+    border-radius: 50%;
+  }
+
+  .tips {
+    font-size: 14px;
+
+    line-height: 1.4em;
+
+    color: #7e7d7d;
+  }
+
+  label {
+    margin-right: 10px;
+  }
+
+  textarea {
+    display: inline-block;
+    padding: 4px;
+    height: 40px;
+    resize: none;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    vertical-align: bottom;
+  }
+
+  .btn {
+    display: inline-block;
+    vertical-align: bottom;
+    background-color: transparent;
+    margin-right: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 0.2em 1em;
+    border: 1px solid #dcdfe6;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #409eff;
+    color: white;
+    border-color: #409eff;
+  }

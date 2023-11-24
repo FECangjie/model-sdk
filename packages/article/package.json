@@ -1,0 +1,40 @@
+{
+  "name": "article",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "patch-package",
+    "start": "node ./src/index ./lib/1.resize.jpg",
+    "serve": "rollup -c -w",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inkjet": "^3.0.0",
+    "onnxruntime-node": "^1.15.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.11.5",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "cross-env": "^7.0.3",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "rollup": "^2.26.11",
+    "rollup-plugin-serve": "^2.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2"
+  }
+}

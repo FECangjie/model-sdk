@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    // "target": "es5",
+    "target": "es6",
+    "noEmitHelpers": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "es5", "es6"],
+    "sourceMap": false,
+    "strict": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  },
+  "declaration": true,
+  "include": ["./**/*.ts", "./**/**/*.ts", "./**/*.tsx"],
+  "exclude": ["node_modules"]
+}
