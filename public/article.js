@@ -125,19 +125,19 @@ function non_max_suppression(input, orig_height, orig_width) {
     answer.forEach((item) => {
         content += "[" + item.toString() + "]\n";
     });
+    console.log('推理结果：');
+    console.log(content);
     // fs.writeFileSync("./lib/output.txt", content);
 }
 function readImgHandle(decoded) {
     if (decoded != undefined) {
         const modelInput = new Float32Array(modelHeight * modelWidth * 3);
         //TODO: check the decode, asserts it is 640x640.
-        console.log(decoded.height, decoded.width);
         console.assert(decoded.height === 640, "bad height, expect 640");
         console.assert(decoded.width === 640, "bad width, expect 640");
         //console.log('before', decoded);//checked correct when size of image is 640x640
         preProcess(decoded, modelInput);
         //console.log('after', modelInput, modelInput); // checked correct when size of iamge is 640x640
-        console.log("3");
         const tensor = new ort.Tensor("float32", modelInput, [
             1,
             3,
@@ -145,9 +145,7 @@ function readImgHandle(decoded) {
             modelWidth,
         ]);
         ort.InferenceSession.create("./lib/nano.onnx").then((se) => {
-            console.log("4");
             se.run({ input: tensor }).then((res) => {
-                console.log("5");
                 // console.log('output', res.output)
                 non_max_suppression(res.output.data, decoded.height, decoded.width);
             });
